@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AulaAutoLayoutCalculadoraIMCUFFManha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NH4-fW-AeH">
+                                <rect key="frame" x="16" y="100" width="288" height="117"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Qp2-f3-EYF">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="117"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Peso (Kg)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SS3-aI-RlE">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="rTL-k0-Xuk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Altura (m)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6k-rU-irt">
+                                                <rect key="frame" x="0.0" y="39" width="288" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="MWz-yq-MX2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbP-59-WbA">
+                                                <rect key="frame" x="0.0" y="77" width="288" height="40"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="KKf-4S-OSe"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="CALCULAR"/>
+                                                <connections>
+                                                    <action selector="btnCalculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eet-PH-h5Z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBt-9W-tUO">
+                                <rect key="frame" x="16" y="227" width="288" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FbM-r0-Y5w">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SiB-gu-2Bs">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Z3h-WV-c2l"/>
+                                            <constraint firstAttribute="width" constant="100" id="e5d-kx-LHg"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vvd-2v-Izx">
+                                        <rect key="frame" x="100" y="0.0" width="188" height="100"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="RESULTADO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuC-4n-4yW">
+                                                <rect key="frame" x="0.0" y="0.0" width="188" height="100"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="gsp-zU-ArM"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYA-dA-As4">
+                                <rect key="frame" x="16" y="337" width="272" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabela-imc" translatesAutoresizingMaskIntoConstraints="NO" id="YUS-bB-BGT">
+                                        <rect key="frame" x="0.0" y="0.0" width="272" height="200.00000000000011"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Mlr-07-dsz"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Va-cg-VOA">
+                                <rect key="frame" x="16" y="30" width="288" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculadora IMC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmi-Nr-Ono">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="BgW-Vy-y1t"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IBt-9W-tUO" secondAttribute="trailing" constant="16" id="53w-SV-Glw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NH4-fW-AeH" secondAttribute="trailing" constant="16" id="7aO-f3-ArV"/>
+                            <constraint firstItem="AYA-dA-As4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Htw-XX-yty"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AYA-dA-As4" secondAttribute="trailing" constant="16" id="PYq-DK-rFD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Va-cg-VOA" secondAttribute="trailing" constant="16" id="bSB-Rf-OWK"/>
+                            <constraint firstItem="3Va-cg-VOA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="eEN-hx-ZIU"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="AYA-dA-As4" secondAttribute="bottom" id="iJ8-Cp-EtM"/>
+                            <constraint firstItem="NH4-fW-AeH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="j7r-Oy-d40"/>
+                            <constraint firstItem="NH4-fW-AeH" firstAttribute="top" secondItem="3Va-cg-VOA" secondAttribute="bottom" constant="30" id="jXJ-sR-uBv"/>
+                            <constraint firstItem="IBt-9W-tUO" firstAttribute="top" secondItem="NH4-fW-AeH" secondAttribute="bottom" constant="10" id="rWt-eX-CY4"/>
+                            <constraint firstItem="3Va-cg-VOA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yd5-iL-CLx"/>
+                            <constraint firstItem="IBt-9W-tUO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zZt-Ii-icn"/>
+                            <constraint firstItem="AYA-dA-As4" firstAttribute="top" secondItem="IBt-9W-tUO" secondAttribute="bottom" constant="10" id="ztj-wz-Tog"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultImage" destination="SiB-gu-2Bs" id="wV6-9W-R52"/>
+                        <outlet property="resultTextView" destination="WuC-4n-4yW" id="1Lp-PF-ShU"/>
+                        <outlet property="userHeightField" destination="J6k-rU-irt" id="xSJ-Qw-hAL"/>
+                        <outlet property="userWeightField" destination="SS3-aI-RlE" id="hzP-Vl-bbW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabela-imc" width="757" height="501"/>
+    </resources>
+</document>
